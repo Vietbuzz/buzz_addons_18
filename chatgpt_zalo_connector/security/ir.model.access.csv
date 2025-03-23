@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_chatgpt_config_user,chatgpt.config.user,model_chatgpt_config,base.group_user,1,1,1,0
+access_chatgpt_config_manager,chatgpt.config.manager,model_chatgpt_config,base.group_system,1,1,1,1
+access_zalo_config_user,zalo.config.user,model_zalo_config,base.group_user,1,1,1,0
+access_zalo_config_manager,zalo.config.manager,model_zalo_config,base.group_system,1,1,1,1
+access_zalo_message_user,zalo.message.user,model_zalo_message,base.group_user,1,1,1,0
+access_zalo_message_manager,zalo.message.manager,model_zalo_message,base.group_system,1,1,1,1

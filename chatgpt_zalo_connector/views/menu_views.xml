@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menu chính -->
+    <menuitem id="menu_chatgpt_zalo_root"
+              name="ChatGPT Zalo"
+              sequence="10"/>
+
+    <!-- Menu tin nhắn -->
+    <menuitem id="menu_zalo_message"
+              name="Tin nhắn"
+              parent="menu_chatgpt_zalo_root"
+              action="action_zalo_message"
+              sequence="5"/>
+
+    <!-- Menu cấu hình -->
+    <menuitem id="menu_chatgpt_zalo_config"
+              name="Cấu hình"
+              parent="menu_chatgpt_zalo_root"
+              sequence="10"/>
+
+    <!-- Menu con -->
+    <menuitem id="menu_chatgpt_config"
+              name="Cấu hình ChatGPT"
+              parent="menu_chatgpt_zalo_config"
+              action="action_chatgpt_config"
+              sequence="10"/>
+
+    <menuitem id="menu_zalo_config"
+              name="Cấu hình Zalo"
+              parent="menu_chatgpt_zalo_config"
+              action="action_zalo_config"
+              sequence="20"/>
+</odoo> 
