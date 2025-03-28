@@ -14,7 +14,7 @@ class ZaloWebhookController(http.Controller):
         """Xử lý webhook từ Zalo OA"""
         try:
             # Lấy thông tin gửi từ Zalo
-            data = request.jsonrequest
+            data = json.loads(request.httprequest.data)
             _logger.info("Nhận webhook từ Zalo: %s", json.dumps(data))
             
             # Kiểm tra cấu hình Zalo
