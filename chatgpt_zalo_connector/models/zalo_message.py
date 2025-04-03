@@ -172,7 +172,8 @@ class ZaloMessage(models.Model):
             params = {
                 'app_id': zalo_config.app_id,
                 'app_secret': zalo_config.app_secret,
-                'grant_type': 'authorization_code'
+                'refresh_token': zalo_config.refresh_token,
+                'grant_type': 'refresh_token'
             }
             
             response = requests.get(
@@ -188,6 +189,7 @@ class ZaloMessage(models.Model):
                 
             result = response.json()
             access_token = result.get('access_token')
+            refresh_token = result.get('refresh_token')
             expires_in = result.get('expires_in', 0)
             
             # Cập nhật token vào config
@@ -196,6 +198,7 @@ class ZaloMessage(models.Model):
             
             zalo_config.write({
                 'access_token': access_token,
+                'refresh_token': refresh_token,
                 'token_expires_at': expires_at
             })
             

@@ -11,6 +11,7 @@ class ZaloConfig(models.Model):
     app_secret = fields.Char(string='App Secret', required=True, tracking=True)
     oa_id = fields.Char(string='OA ID', required=True, tracking=True)
     access_token = fields.Char(string='Access Token', readonly=True, tracking=True)
+    refresh_token = fields.Char(string='Refresh Token', readonly=True, tracking=True)
     token_expires_at = fields.Datetime(string='Token hết hạn', readonly=True, tracking=True)
     active = fields.Boolean(string='Đang hoạt động', default=True, tracking=True)
     company_id = fields.Many2one('res.company', string='Công ty', default=lambda self: self.env.company, tracking=True)
