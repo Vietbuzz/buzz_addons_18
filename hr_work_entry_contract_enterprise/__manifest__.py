@@ -21,5 +21,5 @@
             'hr_work_entry_contract_enterprise/static/**/*',
         ],
     },
-    'license': 'OEEL-1',
+    'license': 'LGPL-3',
 }

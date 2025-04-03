@@ -9,7 +9,7 @@
     'description': """ """,
     'depends': ['hr', 'web_gantt'],
     'auto_install': True,
-    'license': 'OEEL-1',
+    'license': 'LGPL-3',
     'assets': {
         'web.assets_backend_lazy': [
             'hr_gantt/static/src/**/*',

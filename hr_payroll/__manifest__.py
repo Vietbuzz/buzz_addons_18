@@ -76,6 +76,6 @@
             'hr_payroll/static/tests/**/*.js',
         ],
     },
-    'license': 'OEEL-1',
+    'license': 'LGPL-3',
     'post_init_hook': '_post_init_hook',
 }
